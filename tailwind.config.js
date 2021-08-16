@@ -1,5 +1,8 @@
 module.exports = {
-  purge: ['./**/*.html'],
+  purge: {
+    enabled: true,
+    content: ['./public/**/*.html'],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -17,9 +20,9 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
-      }
-      
-    },
+    }
+
+  },
   variants: {
     extend: {},
     display: ['responsive', 'group-hover', 'group-focus'],
